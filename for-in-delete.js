@@ -24,7 +24,8 @@
 // }
 
 /*
-  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
+  In this next example, we are accessing the property names themselves. 
+  Uncomment the code below, run it and look at what prints in the console.
 */
 
 // for(var key in values) {
@@ -36,11 +37,17 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
+  Inside the function showValues, write a for in loop that concatenates 
+  each of the property values and returns the concatenated string.
 */
 
 function showValues( obj ) {
-  //Code Here
+let newValues = '';
+  for(let key in obj){
+     newValues += obj[key]
+  }
+ 
+  return newValues
 }
 
 
@@ -49,11 +56,22 @@ function showValues( obj ) {
 
 /*
   Write a function called greaterThan10 that takes in an object. 
-  Write a for in loop that loops over the object and changes any value that is greater than 10 to 0. 
-  Return the updated object.
+  Write a for in loop that loops over the object and changes any 
+  value that is greater than 10 to 0. Return the updated object.
 */
 
 //Code Here
+
+function greaterThan10(object){
+  for(let key in object ){
+    if(object[key] > 10){
+      object[key] = 0
+      
+      
+    }
+  }
+  return object
+}
 
 
 
